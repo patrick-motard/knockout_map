@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>knockoutMap</title></title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  
+  <script src="scripts/bower_components/jquery/dist/jquery.js"></script>
+  <script src="scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="scripts/bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="scripts/bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+  <script src="scripts/bower_components/knockout/dist/knockout.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6" style="border: 1px solid black; height:100px">
+        <!-- This is a *view* - HTML markup that defines the appearance of your UI -->
+        <p>First name: <input data-bind="value: firstName"/></p>
+        <p>Last name: <input data-bind="value: lastName"/></p>
+        <span data-bind="text: firstName"></span>
+      </div>
+      
+      <div class="col-md-6" style="border: 1px solid blue; height:100px">
+<!--        <div><span data-bind="text: currentProfit"></span></div>
+        <div data-bind="css: { profitWarning: currentProfit() < 0 }">
+          Profit Information
+        </div>
+        <button data-bind="click: incrementProfit">Increase Profit</button>
+        <button data-bind="click: decrementProfit">Decrease Profit</button>
+          
+      </div>-->
+      <div data-bind="style:{ height: end }" style="border: 1px dashed orange">
+         Profit Information
+      </div>
+      
+ 
+      
+    </div>
+  </div>
+<!--  <script type="text/javascript">
+      var viewModel = {
+          currentProfit: ko.observable(150000)
+      };
+   
+      // Evalutes to a positive value, so initially we apply the "profitPositive" class
+      viewModel.profitStatus = ko.pureComputed(function() {
+          return this.currentProfit() < 0 ? "profitWarning" : "profitPositive";
+      }, viewModel);
+   
+      // Causes the "profitPositive" class to be removed and "profitWarning" class to be added
+      viewModel.currentProfit(-50);
+  </script>-->
+</body>
+</html>
